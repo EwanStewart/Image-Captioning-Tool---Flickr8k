@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Image Captioner</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="{{url_for('static', filename='script.js')}}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <h1>Image Captioner</h1>
+        <p>Upload an image to classify and caption it.</p>
+
+        <div id="imgUploadContainer">
+            <form method="GET" action="/predict">
+                <label for="chosenImg">Choose an image to caption:</label>
+                <br><br>
+                <input type="file" id="imgUpload" name="chosenImg" accept="image/png, image/jpeg">
+                <br><br>
+                <img id="imgPreview" src="" alt="Image Preview" style="display: none;">
+                <br><br>
+                <input type="submit" id="submitBtn" style="display: none;">
+            </form>
+        </div>
+        
+    </body>
+</html>
+    
